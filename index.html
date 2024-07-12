@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+    <h1>Formulário de Cadastro</h1>
+    <h2>Seja bem-vindo! Complete o formulário abaixo para se cadastrar.</h2><hr>
+
+    <form id="signupForm">
+        <label for="first-name">Digite seu primeiro nome: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Digite seu último nome: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Digite seu e-mail: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Crie uma senha: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+        <hr>
+    
+        <legend>Tipo de conta (obrigatório):</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Pessoal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Profissional</label>
+      <hr>
+      <fieldset>
+        <label for="profile-picture">Foto de perfil: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Insira sua idade: <input id="age" type="number" name="age" min="18" max="120" /></label>
+        <label for="referrer">Como ouviu falar de nós?
+          <select id="referrer" name="referrer">
+            <option value="">(selecionar opção)</option>
+            <option value="1">Instagram</option>
+            <option value="2">Facebook</option>
+            <option value="3">Revistas</option>
+            <option value="4">Outro</option>
+          </select>
+        </label>
+        <label for="bio">Bio:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Escreva uma breve descrição sobre você..."></textarea>
+        </label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> Eu li e aceito os <a href="https://www.freecodecamp.org/news/terms-of-service/">termos e condições</a>
+      </label>
+      <button type="submit">Enviar</button>
+    </form>
+    </div>
+    <script src="scripts.js"></script>
+    
+  </body>
+</html>
