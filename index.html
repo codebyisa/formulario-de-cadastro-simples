@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <title>Formulário de Cadastro</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- jQuery 
+     biblioteca-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- jQuery UI -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+<script>
+    $( function() {
+    $( "#datepicker" ).datepicker();
+    $( "#anim" ).on( "change", function() {
+      $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+    });
+  } );
+</script>
+
   </head>
   <body>
     <div class="container">
     <h1>Formulário de Cadastro</h1>
     <h2>Seja bem-vindo! Complete o formulário abaixo para se cadastrar.</h2><hr>
-
+    
     <form id="signupForm">
         <label for="first-name">Digite seu primeiro nome: <input id="first-name" name="first-name" type="text" required /></label>
         <label for="last-name">Digite seu último nome: <input id="last-name" name="last-name" type="text" required /></label>
         <label for="email">Digite seu e-mail: <input id="email" name="email" type="email" required /></label>
         <label for="new-password">Crie uma senha: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
-        <hr>
+        <hr></fieldset>
     
         <legend>Tipo de conta (obrigatório):</legend>
         <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Pessoal</label>
@@ -23,7 +39,7 @@
       <hr>
       <fieldset>
         <label for="profile-picture">Foto de perfil: <input id="profile-picture" type="file" name="file" /></label>
-        <label for="age">Insira sua idade: <input id="age" type="number" name="age" min="18" max="120" /></label>
+        <label for="dataNascimento">Insira sua data de nascimento: <input type="text" id="dataNascimento" name="dataNascimento"/></label>
         <label for="referrer">Como ouviu falar de nós?
           <select id="referrer" name="referrer">
             <option value="">(selecionar opção)</option>
@@ -43,6 +59,17 @@
       <button type="submit">Enviar</button>
     </form>
     </div>
+    <script>
+        $(document).ready(function() {
+          $('#dataNascimento').datepicker({
+            dateFormat: 'dd/mm/yy', // Formato da data
+            changeYear: true,       // Permite selecionar o ano
+            yearRange: '1900:2006'  // Define o intervalo de anos
+            //eu defini baseando que a idade mínima fosse 18 anos
+            // Outras opções podem ser adicionadas conforme necessário
+          });
+        });
+      </script>
     <script src="scripts.js"></script>
     
   </body>

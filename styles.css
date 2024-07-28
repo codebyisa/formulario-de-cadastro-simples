@@ -7,7 +7,7 @@ body {
     margin: 0;
     background-color: #1b1b32;
     color: #b5c6d6;
-    font-family: Tahoma;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
   }
 
@@ -38,6 +38,13 @@ h2 {
     margin: 0 auto;
     padding-bottom: 2em;
   }
+
+  #dataNascimento {
+    width: auto;
+    background-color: #0a0a23;
+    box-shadow: #3b3b4f;
+    color: #1b1b32
+  }
   
   hr {
     border: none;
@@ -55,12 +62,18 @@ h2 {
   }
 
   input,
-  textarea,
-  select {
+textarea,
+select {
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;
-  }
+    padding: 5px;
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+    border-radius: 5px; /* Adicionando borda arredondada */
+}
+
   
   input, textarea {
     background-color: #0a0a23;
@@ -100,7 +113,7 @@ h2 {
   }
   
   input[type="file"] {
-    padding: 1px 2px;
+    padding: 1px 2px 1px 2px;
   }
   
   .inline{
