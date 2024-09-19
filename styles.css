@@ -127,3 +127,29 @@ input[type="file"] {
 a {
     color: #1976d2; /* Azul para links */
 }
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  body {
+      font-size: 14px; /* Reduzir tamanho da fonte em telas menores */
+  }
+
+  .container {
+      padding: 15px; /* Ajustar o padding do container */
+      margin: 10px; /* Reduzir margens em dispositivos móveis */
+  }
+
+  h1, p {
+      font-size: 20px; /* Reduzir tamanho da fonte para h1 e p */
+  }
+
+  form {
+      width: 90vw; /* Tornar o formulário mais largo em telas pequenas */
+      padding-bottom: 1em; /* Ajustar padding inferior */
+  }
+
+  input[type="submit"] {
+      width: 80%; /* Aumentar a largura do botão em telas pequenas */
+      min-width: auto; /* Remover largura mínima */
+  }
+}
