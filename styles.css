@@ -1,124 +1,129 @@
 /* styles.css 
 estilização das páginas */ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-color: #1b1b32;
-    color: #b5c6d6;
-    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e1bee7, #ce93d8);
+    color: #222222; /* Texto escuro para boa legibilidade */
+    font-family: 'Roboto', Helvetica, sans-serif;
     font-size: 16px;
-  }
+}
 
-  .container {
-    background-color: #1b1b32;
-    padding: 20px;
-    box-shadow: #0a0a23;
-    border-radius: 5px;
-  }
-  
-  h1, p {
+.container {
+    background-color: #ffffff; /* Branco limpo para o container */
+    padding: 20px 20px;
+    color: #2d2d2d; /* Texto escuro dentro do container */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.295); /* Sombra sutil */
+    width: 100%;
+    max-width: 500px; /* Mantendo a largura máxima */
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1, p {
     margin: 1em auto;
     text-align: center;
     font-size: 25px;
-
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
-h2 {
-    margin: 1em auto;
-    text-align: center;
-    font-size: 18px;
-    
-    }
-  
-  form {
+
+p {
+    font-size: 20px;
+}
+
+form {
     width: 60vw;
     max-width: 500px;
     min-width: 300px;
     margin: 0 auto;
     padding-bottom: 2em;
-  }
+}
 
-  #dataNascimento {
+#dataNascimento {
     width: auto;
-    background-color: #0a0a23;
-    box-shadow: #3b3b4f;
-    color: #1b1b32
-  }
-  
-  hr {
+    background-color: #e3f2fd; /* Azul muito claro */
+    box-shadow: #cfd8dc; /* Sombra leve */
+    color: #2d2d2d; /* Texto escuro */
+}
+
+hr {
     border: none;
-    padding: 2rem 0;
-    border-bottom: 3px solid #3b3b4f;
-  }
-  
-  hr:last-of-type {
+    padding: 1rem 0;
+    border-bottom: 1px solid #73207e; /* Azul claro para a linha */
+}
+
+hr:last-of-type {
     border-bottom: none;
-  }
-  
-   form label {
+}
+
+form label {
     display: block;
     margin: 0.5rem 0;
-  }
+}
 
-  input,
+input,
 textarea,
 select {
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;
     padding: 5px;
-    background-color: #0a0a23;
-    border: 1px solid #0a0a23;
-    color: #ffffff;
-    border-radius: 5px; /* Adicionando borda arredondada */
+    background-color: #eeeeee; /* Azul muito claro */
+    border: 1px solid #c190f9; /* Borda azul clara */
+    color: #2d2d2d; /* Texto escuro */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
-  
-  input, textarea {
-    background-color: #0a0a23;
-    border: 1px solid #0a0a23;
-    color: #ffffff;
-  }
+input, textarea {
+    background-color: #eeeeee; /* Azul muito claro */
+    border: 1px solid #c190f9; /* Borda azul clara */
+    color: #2d2d2d; /* Texto escuro */
+}
 
-  form button {
+form button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #0a0a23;
+    background-color: #9521f3; /* Azul vibrante para o botão */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  form button:hover {
-    background-color: #0a0a23;
-  }
-  
-  .inline {
+form button:hover {
+    background-color: #9819d2; /* Azul um pouco mais escuro ao passar o mouse */
+}
+
+.inline {
     width: unset;
     margin: 0 0.5em 0 0;
     vertical-align: middle;
-  }
-  
-  input[type="submit"] {
+}
+
+input[type="submit"] {
     display: block;
     width: 60%;
     margin: 1em auto;
     height: 2em;
     font-size: 1.1rem;
-    background-color: #3b3b4f;
+    background-color: #eeeeee; /* Azul mais claro para o botão */
     border-color: rgb(208, 201, 241);
     min-width: 300px;
-  }
-  
-  input[type="file"] {
+}
+
+input[type="file"] {
     padding: 1px 2px 1px 2px;
-  }
-  
-  .inline{
+}
+
+.inline {
     display: inline; 
-  }
-  a {
-    color: #dfdfe2;
-    }  
+}
+
+a {
+    color: #1976d2; /* Azul para links */
+}
